@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o  -o cp 
