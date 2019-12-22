@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/adam/CLionProjects/cp/LeetCode/PB_139_WordBreak.cpp">
+		<Unit filename="/home/adam/CLionProjects/cp/BackTracking/Subsequence.cpp">
 			<Option target="cp"/>
 		</Unit>
 		<Unit filename="/home/adam/CLionProjects/cp/CMakeLists.txt">

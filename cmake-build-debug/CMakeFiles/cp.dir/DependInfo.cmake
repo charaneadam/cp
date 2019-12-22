@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/adam/CLionProjects/cp/LeetCode/PB_139_WordBreak.cpp" "/home/adam/CLionProjects/cp/cmake-build-debug/CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.o"
+  "/home/adam/CLionProjects/cp/BackTracking/Subsequence.cpp" "/home/adam/CLionProjects/cp/cmake-build-debug/CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

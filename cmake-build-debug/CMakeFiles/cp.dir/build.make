@@ -57,27 +57,27 @@ include CMakeFiles/cp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cp.dir/flags.make
 
-CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.o: CMakeFiles/cp.dir/flags.make
-CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.o: ../LeetCode/PB_139_WordBreak.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/CLionProjects/cp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.o -c /home/adam/CLionProjects/cp/LeetCode/PB_139_WordBreak.cpp
+CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o: CMakeFiles/cp.dir/flags.make
+CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o: ../BackTracking/Subsequence.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/CLionProjects/cp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o -c /home/adam/CLionProjects/cp/BackTracking/Subsequence.cpp
 
-CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/CLionProjects/cp/LeetCode/PB_139_WordBreak.cpp > CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.i
+CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/CLionProjects/cp/BackTracking/Subsequence.cpp > CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.i
 
-CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/CLionProjects/cp/LeetCode/PB_139_WordBreak.cpp -o CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.s
+CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/CLionProjects/cp/BackTracking/Subsequence.cpp -o CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.s
 
 # Object files for target cp
 cp_OBJECTS = \
-"CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.o"
+"CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o"
 
 # External object files for target cp
 cp_EXTERNAL_OBJECTS =
 
-cp: CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.o
+cp: CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o
 cp: CMakeFiles/cp.dir/build.make
 cp: CMakeFiles/cp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/CLionProjects/cp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cp"

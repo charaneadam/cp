@@ -123,32 +123,32 @@ cp/fast:
 	$(MAKE) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/build
 .PHONY : cp/fast
 
-LeetCode/PB_139_WordBreak.o: LeetCode/PB_139_WordBreak.cpp.o
+BackTracking/Subsequence.o: BackTracking/Subsequence.cpp.o
 
-.PHONY : LeetCode/PB_139_WordBreak.o
+.PHONY : BackTracking/Subsequence.o
 
 # target to build an object file
-LeetCode/PB_139_WordBreak.cpp.o:
-	$(MAKE) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.o
-.PHONY : LeetCode/PB_139_WordBreak.cpp.o
+BackTracking/Subsequence.cpp.o:
+	$(MAKE) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.o
+.PHONY : BackTracking/Subsequence.cpp.o
 
-LeetCode/PB_139_WordBreak.i: LeetCode/PB_139_WordBreak.cpp.i
+BackTracking/Subsequence.i: BackTracking/Subsequence.cpp.i
 
-.PHONY : LeetCode/PB_139_WordBreak.i
+.PHONY : BackTracking/Subsequence.i
 
 # target to preprocess a source file
-LeetCode/PB_139_WordBreak.cpp.i:
-	$(MAKE) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.i
-.PHONY : LeetCode/PB_139_WordBreak.cpp.i
+BackTracking/Subsequence.cpp.i:
+	$(MAKE) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.i
+.PHONY : BackTracking/Subsequence.cpp.i
 
-LeetCode/PB_139_WordBreak.s: LeetCode/PB_139_WordBreak.cpp.s
+BackTracking/Subsequence.s: BackTracking/Subsequence.cpp.s
 
-.PHONY : LeetCode/PB_139_WordBreak.s
+.PHONY : BackTracking/Subsequence.s
 
 # target to generate assembly for a file
-LeetCode/PB_139_WordBreak.cpp.s:
-	$(MAKE) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/LeetCode/PB_139_WordBreak.cpp.s
-.PHONY : LeetCode/PB_139_WordBreak.cpp.s
+BackTracking/Subsequence.cpp.s:
+	$(MAKE) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/BackTracking/Subsequence.cpp.s
+.PHONY : BackTracking/Subsequence.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... cp"
 	@echo "... edit_cache"
-	@echo "... LeetCode/PB_139_WordBreak.o"
-	@echo "... LeetCode/PB_139_WordBreak.i"
-	@echo "... LeetCode/PB_139_WordBreak.s"
+	@echo "... BackTracking/Subsequence.o"
+	@echo "... BackTracking/Subsequence.i"
+	@echo "... BackTracking/Subsequence.s"
 .PHONY : help
 
 
