@@ -3,4 +3,4 @@ project(cp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cp LeetCode/Pb_53_MaximumSubArray.cpp)
+add_executable(cp codeforces/D1&D2_1073_C_Equalizer.cpp)
