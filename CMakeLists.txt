@@ -3,4 +3,4 @@ project(cp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cp codeforces/D3_565_C_LostIt.cpp)
+add_executable(cp misc/classics/Kadan.cpp)
