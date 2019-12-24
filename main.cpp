@@ -26,62 +26,8 @@ typedef vector<ii> vii;
 typedef vector<bool> vb;
 typedef vector<vi> vvi;
 
-vector<vb> g;
-vector<vll> dp;
-int n,m;
-
-vi extractIntegerWords(string str){
-    stringstream ss(str);
-    string temp;
-    int found;
-    vi integers;
-    while (!ss.eof()) {
-        ss >> temp;
-        if (stringstream(temp) >> found)
-            integers.PB(found);
-        temp = "";
-    }
-    return integers;
-}
-
-ll solve(int r, int c){
-    if(r >= n || c >= m || !g[r][c]) return 0;
-    if((r == n-1 && c == m-2) || (r == n-2 && c == m-1))
-        return 1;
-    return solve(r+1, c) + solve(r,c+1);
-}
 
 int main() {
     IOS;
-    int tc;
-    cin >> tc;
-    string line;
-    while(tc--){
-        cin >> n >> m;
-        g.assign(n, vb(m, true));
-        for(int i=0; i<n; i++){
-            getline(cin, line);
-            vi ints = extractIntegerWords(line);
-            if(ints.size() > 1) for(int j=1; j<(int)ints.size(); j++) g[i][ints[j]-1] = false;
-        }
-        cout << solve(0, 0);
-        if(tc) cout << endl;
-    }
     return 0;
 }
-
-/*
-* Test cases:
-*
- * TC#1:
- *  Input:
- *      {{1,1,1,1,1,1,1,1},{1,1,0,1,1,1,1,1},{1,1,1,1,0,1,1,1},{1,1,1,1,0,0,1,1},{1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1}}
- *  Output:
- *      166
- *
- * TC#2:
- *  Input:
- *      {}
- *  Output:
- *      0
-*/
