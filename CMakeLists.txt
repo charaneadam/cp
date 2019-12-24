@@ -3,4 +3,4 @@ project(cp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cp codeforces/D3_590_C_Pipes.cpp)
+add_executable(cp codeforces/D2_572_C_Candies.cpp)
