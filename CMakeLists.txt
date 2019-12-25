@@ -3,4 +3,4 @@ project(cp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cp uva/pb_11450_WeddingShopping.cpp)
+add_executable(cp "HackerRank/StoneDivision_Revisited.cpp")
