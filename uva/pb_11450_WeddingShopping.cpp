@@ -101,7 +101,7 @@ private:
     void read_input(){
         cin >> m >> c;
         t.assign(c, vector<int>());
-        dp.assign(m+1, vector<int>(c, -2));
+        dp.assign(m+1, vector<int>(c, -1));
         for (int i = 0, k, a; i < c; i++) {
             cin >> k;
             for (int j = 0; j < k; j++) {
@@ -111,15 +111,15 @@ private:
         }
     }
 
-    int solve(int amount, int i=0, int sum=0){
-        if(amount < 0) return -1;
+    int solve(int amount, int i=0){
+        if(amount < 0) return numeric_limits<int>::min();
         if(i == c){
-            return sum;
+            return m - amount;
         }
         int &ans = dp[amount][i];
-        if(ans != -2) return ans;
+        if(ans != -1) return ans;
         for(auto s : t[i]){
-            int a = solve(amount - s, i+1, sum + s);
+            int a = solve(amount - s, i+1);
             ans = max(ans, a);
         }
         return ans;
@@ -133,7 +133,7 @@ public:
         while(tc--){
             read_input();
             int sol = solve(m);
-            if(sol+1) cout << sol;
+            if(sol > 0) cout << sol;
             else cout << "no solution";
             cout << endl;
         }
