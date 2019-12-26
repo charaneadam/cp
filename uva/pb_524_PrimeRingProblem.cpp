@@ -1,58 +1,49 @@
-#include <iostream>
-#include <vector>
-#include <map>
-#include <set>
-#include <algorithm>
-#include <sstream>
-#include <limits>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 int n;
-set<int> rem, primes;
-vector<int> sol;
+vector<int> primes;
+int sol[20];
+vector<bool> taken;
 
 void printSol(){
-    for(int i=0; i<n; i++){
-        cout << sol[i];
-        if(i<n-1) cout << ' ';
+    for(int j=0; j<n; j++){
+        cout << sol[j];
+        if(j != n-1) cout << ' ';
     }
     cout << endl;
 }
 
 void solve(int p){
     if(p == n){
-        printSol();
+        if(binary_search(primes.begin(), primes.end(), 1 + sol[n-1]))
+            printSol();
+        return;
     }
-    else{
-        for(auto num : rem){
-            if(p == n-1){
-                if(primes.count(num + 1) && primes.count(num + sol[p-1])){
-                    sol.emplace_back(num);
-                    rem.erase(num);
-                    solve(p+1);
-                    rem.insert(num);
-                    sol.pop_back();
-                }
-            }
-            else if(primes.count(num + sol[p-1])){
-                sol.emplace_back(num);
-                rem.erase(num);
-                solve(p+1);
-                rem.insert(num);
-                sol.pop_back();
-            }
+    int prev = sol[p-1];
+    for(int r = 2; r<=n; r++){
+        if(taken[r]) continue;
+        if(binary_search(primes.begin(), primes.end(), prev+r)){
+            sol[p] = r;
+            taken[r] = true;
+            solve(p+1);
+            taken[r] = false;
         }
     }
 }
 
 int main(){
-    primes = {2,3,5,7,11,13,17,19,23,29,31};
-    sol.emplace_back(1);
+    primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37};
+    sol[0] = 1;
+    int tc = 0;
     while(cin >> n){
-        for(int i=2; i<=n; i++) rem.insert(i);
-        solve(1);
-        rem.clear();
+        if(tc++) cout << endl;
+        cout << "Case " << tc << ": " << endl;
+        taken.assign(20, false);
+        taken[1] = true;
+        if(n > 1){
+            solve(1);
+        }
     }
     return 0;
 }
