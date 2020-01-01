@@ -4,13 +4,15 @@ using namespace std;
 const double EPS = 1e-9;
 const double PI = acos(-1.0);
 
-double DEG_to_RAD(double theta){
-    return theta * PI / 180.0;
-}
+struct angle{
+    static double DEG_to_RAD(double theta){
+        return theta * PI / 180.0;
+    }
 
-double RAD_to_DEG(double theta){
-    return theta * 180.0 / PI;
-}
+    static double RAD_to_DEG(double theta){
+        return theta * 180.0 / PI;
+    }
+};
 
 template <typename T>
 struct point{
@@ -41,10 +43,46 @@ struct point{
     }
 
     point rotate(double theta){
-        double rad = DEG_to_RAD(theta);
+        double rad = angle::DEG_to_RAD(theta);
         return point(x * cos(rad) - y * sin(rad), x * sin(rad) + y * cos(rad));
     }
 
+};
+
+struct line{
+    double a, b, c;
+
+    static line line_from_points(point<double> p1, point<double> p2){
+        line l{};
+        if(fabs(p1.x - p2.x) < EPS){
+            l.a = 1.0;
+            l.b = 0.0;
+            l.c = -p1.x;
+        }
+        else{
+            l.a = -(p1.y - p2.y) / (p1.x - p2.x);
+            l.b = 1.0;
+            l.c = -(l.a * p1.x) - p1.y;
+        }
+        return l;
+    }
+
+    bool is_parallel(line other){
+        return (fabs(a - other.a) < EPS && fabs(b - other.b) < EPS);
+    }
+
+    bool is_same(line other){
+        return is_parallel(other) && fabs(c - other.c) < EPS;
+    }
+
+    pair<bool, point<double>> does_intersect(line other){
+        point<double> intersection;
+        if(is_parallel(other)) return {false, intersection};
+        intersection.x = (other.b * c - b * other.c);
+        if(fabs(b) > EPS) intersection.y = -(a * intersection.x + c);
+        else intersection.y = -(other.a * intersection.x + other.c);
+        return {true, intersection};
+    }
 };
 
 int main(){
