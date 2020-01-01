@@ -3,4 +3,4 @@ project(cp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cp codeforces/D2_401_B_GameOfCreditCards.cpp)
+add_executable(cp tools/geometry/basic_utilities.cpp)
