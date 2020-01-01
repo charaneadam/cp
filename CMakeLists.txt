@@ -3,4 +3,4 @@ project(cp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cp tools/geometry/basic_utilities.cpp)
+add_executable(cp Graphs/DFS/Acyclic.cpp Graphs/Graph.cpp Graphs/Graph.h)
