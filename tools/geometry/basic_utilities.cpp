@@ -85,6 +85,33 @@ struct line{
     }
 };
 
+struct vec{
+    double x, y;
+
+    vec(double _x, double _y) : x(_x), y(_y) {}
+
+    static vec vec_from_points(point<double> a, point<double> b){
+        return {b.x - a.x, b.y - a.y};
+    }
+
+    vec scale(double s){
+        return {x*s, y*s};
+    }
+
+    point<double> translate(point<double> p){
+        return {p.x + x, p.y + y};
+    }
+
+    double dot(vec other){
+        return x * other.x + y * other.y;
+    }
+
+    double norm(){
+        return x*x + y*y;
+    }
+
+};
+
 int main(){
     return 0;
 }
