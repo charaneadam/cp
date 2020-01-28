@@ -3,4 +3,4 @@ project(cp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cp codeforces/D2_272_B_Dreamoon_and_WiFi.cpp)
+add_executable(cp codeforces/D2_350_C_Cinema.cpp)
