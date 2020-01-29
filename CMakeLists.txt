@@ -3,4 +3,4 @@ project(cp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cp codeforces/cf_edu_80_A_Deadline.cpp)
+add_executable(cp codeforces/cf_edu_80_B_YetAnotherMemeProblem.cpp)
